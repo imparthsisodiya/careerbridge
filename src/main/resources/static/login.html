@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Login</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f5f5f5;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .login-card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 44px 40px 36px;
+      width: 100%;
+      max-width: 420px;
+      box-shadow: 0 4px 40px rgba(0,0,0,0.10);
+    }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .logo span {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .logo span b { color: #2563eb; }
+
+    .login-title {
+      text-align: center;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #111;
+      margin-bottom: 6px;
+    }
+
+    .login-subtitle {
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.93rem;
+      margin-bottom: 28px;
+    }
+
+    /* Role Toggle */
+    .role-toggle {
+      display: flex;
+      background: #f3f4f6;
+      border-radius: 50px;
+      padding: 4px;
+      margin-bottom: 24px;
+      gap: 4px;
+    }
+
+    .role-toggle button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 50px;
+      font-size: 0.93rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: transparent;
+      color: #6b7280;
+      transition: all 0.2s ease;
+    }
+
+    .role-toggle button.active {
+      background: #fff;
+      color: #2563eb;
+      font-weight: 600;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.10);
+    }
+
+    /* Social Buttons */
+    .social-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 12px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 12px;
+      background: #fff;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #111;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background 0.15s ease, border-color 0.15s;
+      text-decoration: none;
+    }
+
+    .social-btn:hover { background: #f9fafb; border-color: #d1d5db; }
+
+    .social-btn img { width: 20px; height: 20px; }
+
+    /* Divider */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 18px 0;
+      color: #9ca3af;
+      font-size: 0.88rem;
+    }
+
+    .divider::before, .divider::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: #e5e7eb;
+    }
+
+    /* Form */
+    .input-group { margin-bottom: 14px; }
+
+    .input-group label {
+      display: block;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 6px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e5e7eb;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      color: #111;
+      outline: none;
+      transition: border-color 0.2s;
+      background: #fff;
+    }
+
+    .input-group input:focus { border-color: #2563eb; }
+    .input-group input::placeholder { color: #9ca3af; }
+
+    .forgot-row {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 18px;
+      margin-top: -6px;
+    }
+
+    .forgot-row a { font-size: 0.85rem; color: #2563eb; text-decoration: none; font-weight: 500; }
+    .forgot-row a:hover { text-decoration: underline; }
+
+    .login-btn {
+      width: 100%;
+      padding: 13px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-bottom: 6px;
+    }
+
+    .login-btn:hover { background: #1d4ed8; }
+
+    #loginMessage {
+      text-align: center;
+      font-size: 0.88rem;
+      min-height: 18px;
+      color: #dc2626;
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+
+    #loginMessage.success { color: #16a34a; }
+
+    .register-row {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 0.92rem;
+      color: #6b7280;
+    }
+
+    .register-row a { color: #2563eb; font-weight: 600; text-decoration: none; }
+    .register-row a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="login-card">
+    <div class="logo"><span>Career<b>Bridge</b></span></div>
+    <h1 class="login-title">Your Next Opportunity Starts Here</h1>
+    <p class="login-subtitle">Log in to discover jobs, internships, and career opportunities built for you.</p>
+
+    <!-- Role Toggle -->
+    <div class="role-toggle">
+      <button class="active" id="candidateBtn" onclick="setRole('STUDENT', this)">I'm a Candidate</button>
+      <button id="employerBtn" onclick="setRole('RECRUITER', this)">I'm an Employer</button>
+    </div>
+
+    <!-- Social Login -->
+    <div id="googleSignInDiv" style="display:flex; justify-content:center; margin-bottom:10px;"></div>
+    <button class="social-btn" id="googleFallbackBtn" style="display:none;" onclick="document.querySelector('#googleSignInDiv div[role=button]')?.click()">
+      <svg width="20" height="20" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.08 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.18 1.48-4.97 2.31-8.16 2.31-6.26 0-11.57-3.59-13.46-8.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/><path fill="none" d="M0 0h48v48H0z"/></svg>
+      Continue with Google
+    </button>
+    <button class="social-btn" onclick="alert('LinkedIn login coming soon!')">
+      <svg width="20" height="20" viewBox="0 0 48 48"><rect width="48" height="48" rx="8" fill="#0077B5"/><path fill="#fff" d="M13.5 19h4V35h-4zm2-7a2.5 2.5 0 110 5 2.5 2.5 0 010-5zm8 7h3.8v2.2h.1c.5-1 1.8-2.5 4.1-2.5 4.4 0 5.2 2.9 5.2 6.6V35h-4v-7.8c0-1.9-.7-3.2-2.3-3.2-1.9 0-2.9 1.3-2.9 3.1V35h-4V19z"/></svg>
+      Continue with LinkedIn
+    </button>
+
+    <div class="divider">or continue with email</div>
+
+    <!-- Email Form -->
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+      </div>
+      <div class="forgot-row">
+        <a href="forgot-password.html">Forgot Password?</a>
+      </div>
+      <button type="submit" class="login-btn">Login</button>
+      <p id="loginMessage"></p>
+    </form>
+
+    <div class="register-row">
+      Don't have an account? <a href="register.html">Create one</a>
+    </div>
+  </div>
+
+  <script>
+    let selectedRole = "STUDENT";
+
+    function setRole(role, btn) {
+      selectedRole = role;
+      document.querySelectorAll(".role-toggle button").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+    }
+
+    // ===== Google OAuth =====
+    window.onload = function () {
+      if (window.google) {
+        google.accounts.id.initialize({
+          client_id: "568102620859-qdov9jjp3d3ltofj18ig2q7fj6o60tta.apps.googleusercontent.com",
+          callback: handleGoogleResponse
+        });
+        google.accounts.id.renderButton(
+          document.getElementById("googleSignInDiv"),
+          { theme: "outline", size: "large", width: 340, text: "continue_with" }
+        );
+      }
+    };
+
+    async function handleGoogleResponse(response) {
+      const msg = document.getElementById("loginMessage");
+      try {
+        const res = await fetch("https://careerbridge-drls.onrender.com/api/auth/google", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ idToken: response.credential, role: selectedRole })
+        });
+        const result = await res.json();
+
+        if (result.success) {
+          const user = result.data;
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("token", user.token || "");
+          localStorage.setItem("userEmail", user.email || "");
+          localStorage.setItem("userName", user.name || "User");
+          localStorage.setItem("userRole", user.role || selectedRole);
+
+          const role = user.role || selectedRole;
+          if (role === "STUDENT") window.location.href = "Student-dashboard.html";
+          else if (role === "RECRUITER") window.location.href = "Recruiter-dashboard.html";
+          else window.location.href = "index.html";
+        } else {
+          msg.textContent = result.message || "Google login failed.";
+        }
+      } catch (error) {
+        msg.textContent = "Server error during Google login.";
+      }
+    }
+
+    document.getElementById("loginForm").addEventListener("submit", async function (e) {
+      e.preventDefault();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const msg = document.getElementById("loginMessage");
+      msg.textContent = "";
+      msg.className = "";
+
+      try {
+        const response = await fetch("https://careerbridge-drls.onrender.com/api/auth/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email, password })
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          const user = result.data;
+          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("token", user.token || "");
+          localStorage.setItem("userEmail", user.email || email);
+          localStorage.setItem("userName", user.name || "User");
+          localStorage.setItem("userRole", user.role || selectedRole);
+
+          msg.className = "success";
+          msg.textContent = "Login successful! Redirecting...";
+
+          const role = user.role || selectedRole;
+          if (role === "STUDENT") window.location.href = "Student-dashboard.html";
+          else if (role === "RECRUITER") window.location.href = "Recruiter-dashboard.html";
+          else if (role === "ADMIN") window.location.href = "admin-dashboard.html";
+          else window.location.href = "index.html";
+        } else {
+          msg.textContent = result.message || "Invalid email or password.";
+        }
+      } catch (error) {
+        msg.textContent = "Server error. Please try again.";
+      }
+    });
+  </script>
+
+</body>
+</html>

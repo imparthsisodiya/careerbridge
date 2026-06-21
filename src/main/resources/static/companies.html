@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Companies</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="companies.html" class="active">Companies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="jobs-hero">
+    <div class="container">
+      <div class="jobs-hero-content">
+        <h1>Explore Top Companies</h1>
+        <p>Discover trusted companies hiring through CareerBridge.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+    <div class="container jobs-layout">
+
+      <aside class="filters-sidebar">
+        <div class="filter-card">
+          <h3>Search Companies</h3>
+
+          <div class="filter-group">
+            <label for="companyKeyword">Keyword</label>
+            <input type="text" id="companyKeyword" placeholder="Company name, industry..." />
+          </div>
+
+          <div class="filter-group">
+            <label for="companyLocation">Location</label>
+            <input type="text" id="companyLocation" placeholder="Noida, Bangalore, Remote..." />
+          </div>
+
+          <div class="filter-group">
+            <label for="companyIndustry">Industry</label>
+            <select id="companyIndustry">
+              <option value="">All</option>
+              <option value="Software Development">Software Development</option>
+              <option value="FinTech">FinTech</option>
+              <option value="EdTech">EdTech</option>
+              <option value="Design">Design</option>
+            </select>
+          </div>
+
+          <button id="companySearchBtn" class="btn btn-primary full-btn">Search Companies</button>
+        </div>
+      </aside>
+
+      <main class="jobs-main">
+        <div class="jobs-topbar">
+          <div>
+            <h2>Hiring Companies</h2>
+            <p id="companyCountText">Browse top recruiters and employers</p>
+          </div>
+        </div>
+
+        <div id="companiesContainer" class="jobs-list">
+
+          <div class="job-item">
+            <div class="job-item-top">
+              <div>
+                <h3>TechNova Pvt Ltd</h3>
+                <p class="company-name">Software Development</p>
+              </div>
+              <span class="job-badge">12 Jobs</span>
+            </div>
+
+            <div class="job-meta">
+              <span>Noida</span>
+              <span>Product Company</span>
+              <span>4.5 Rating</span>
+            </div>
+
+            <p class="job-desc">
+              TechNova Pvt Ltd is hiring talented backend, frontend, and full stack developers
+              to build modern and scalable software products.
+            </p>
+
+            <div class="job-skills">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>React</span>
+              <span>MySQL</span>
+            </div>
+
+            <div class="job-actions">
+              <a href="jobs.html" class="btn btn-small">View Jobs</a>
+            </div>
+          </div>
+
+          <div class="job-item">
+            <div class="job-item-top">
+              <div>
+                <h3>CodeSpark Technologies</h3>
+                <p class="company-name">Software Development</p>
+              </div>
+              <span class="job-badge remote-badge">8 Jobs</span>
+            </div>
+
+            <div class="job-meta">
+              <span>Remote</span>
+              <span>Startup</span>
+              <span>4.3 Rating</span>
+            </div>
+
+            <p class="job-desc">
+              CodeSpark Technologies builds modern web products and hires developers, designers,
+              and remote-first engineers.
+            </p>
+
+            <div class="job-skills">
+              <span>JavaScript</span>
+              <span>Frontend</span>
+              <span>Remote Jobs</span>
+              <span>Bootstrap</span>
+            </div>
+
+            <div class="job-actions">
+              <a href="jobs.html" class="btn btn-small">View Jobs</a>
+            </div>
+          </div>
+
+          <div class="job-item">
+            <div class="job-item-top">
+              <div>
+                <h3>BrightPath Solutions</h3>
+                <p class="company-name">FinTech</p>
+              </div>
+              <span class="job-badge hybrid-badge">5 Jobs</span>
+            </div>
+
+            <div class="job-meta">
+              <span>Bangalore</span>
+              <span>Enterprise</span>
+              <span>4.4 Rating</span>
+            </div>
+
+            <p class="job-desc">
+              BrightPath Solutions focuses on finance technology products and hires engineers,
+              analysts, and UI/UX professionals.
+            </p>
+
+            <div class="job-skills">
+              <span>Finance Tech</span>
+              <span>Java</span>
+              <span>SQL</span>
+              <span>UI/UX</span>
+            </div>
+
+            <div class="job-actions">
+              <a href="jobs.html" class="btn btn-small">View Jobs</a>
+            </div>
+          </div>
+
+        </div>
+      </main>
+    </div>
+  </section>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/companies.js"></script>
+</body>
+</html>

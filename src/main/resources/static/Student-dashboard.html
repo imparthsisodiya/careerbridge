@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Student Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="companies.html">Companies</a></li>
+          <li><a href="student-dashboard.html" class="active">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <button class="btn btn-outline" onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Welcome back,</p>
+          <h1 id="studentName">Student</h1>
+          <p class="dashboard-subtext">
+            Track your applications, saved jobs, profile progress, and latest opportunities.
+          </p>
+        </div>
+        <a href="jobs.html" class="btn btn-primary">Browse Jobs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container dashboard-layout">
+
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-card profile-mini-card">
+          <div class="mini-profile-top">
+            <div class="profile-avatar" id="profileInitial">S</div>
+            <div>
+              <h3 id="sidebarName">Student</h3>
+              <p id="sidebarEmail">student@email.com</p>
+            </div>
+          </div>
+          <span class="role-badge">STUDENT</span>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick Links</h3>
+          <ul class="sidebar-links">
+            <li><a href="profile.html">My Profile</a></li>
+            <li><a href="edit-profile.html">Edit Profile</a></li>
+            <li><a href="applied-jobs.html">Applied Jobs</a></li>
+            <li><a href="saved-jobs.html">Saved Jobs</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Profile Completion</h3>
+          <div class="progress-bar">
+            <div class="progress-fill" id="profileProgressFill"></div>
+          </div>
+          <p id="profileProgressText">70% completed</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+
+        <div class="stats-grid">
+          <div class="stat-dashboard-card">
+            <h3 id="appliedCount">0</h3>
+            <p>Applied Jobs</p>
+          </div>
+          <div class="stat-dashboard-card">
+            <h3 id="savedCount">0</h3>
+            <p>Saved Jobs</p>
+          </div>
+          <div class="stat-dashboard-card">
+            <h3 id="interviewCount">0</h3>
+            <p>Interviews</p>
+          </div>
+          <div class="stat-dashboard-card">
+            <h3 id="notificationCount">0</h3>
+            <p>New Notifications</p>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header-row">
+            <h2>Recent Applications</h2>
+            <a href="applied-jobs.html">View All</a>
+          </div>
+
+          <div class="application-list">
+            <div class="application-item">
+              <div>
+                <h3>Java Backend Developer</h3>
+                <p>TechNova Pvt Ltd • Noida</p>
+              </div>
+              <span class="status-badge pending">Pending</span>
+            </div>
+
+            <div class="application-item">
+              <div>
+                <h3>No applications yet</h3>
+                <p>
+                  You have not applied to any jobs yet.
+                </p>
+              </div>
+              <span class="status-badge shortlisted">Shortlisted</span>
+            </div>
+
+            <div class="application-item">
+              <div>
+                <h3>Full Stack Developer</h3>
+                <p>BrightPath Solutions • Bangalore</p>
+              </div>
+              <span class="status-badge rejected">Rejected</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header-row">
+            <h2>Recommended Jobs</h2>
+            <a href="jobs.html">Explore More</a>
+          </div>
+
+          <div class="recommended-jobs-grid">
+            <div class="recommended-job-card">
+              <h3>Spring Boot Developer</h3>
+              <p class="recommended-company">InnoByte Systems</p>
+              <p class="recommended-meta">Delhi • ₹7 - ₹11 LPA</p>
+              <a href="job-details.html" class="btn btn-small">View Job</a>
+            </div>
+
+            <div class="recommended-job-card">
+              <h3>Java Developer</h3>
+              <p class="recommended-company">NextGen Soft</p>
+              <p class="recommended-meta">Noida • ₹5 - ₹9 LPA</p>
+              <a href="job-details.html" class="btn btn-small">View Job</a>
+            </div>
+
+            <div class="recommended-job-card">
+              <h3>Backend Engineer</h3>
+              <p class="recommended-company">CloudBridge Tech</p>
+              <p class="recommended-meta">Remote • ₹8 - ₹12 LPA</p>
+              <a href="job-details.html" class="btn btn-small">View Job</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card">
+          <div class="card-header-row">
+            <h2>Latest Notifications</h2>
+            <a href="notifications.html">Open</a>
+          </div>
+
+          <div class="notification-preview-list">
+            <div class="notification-preview-item">
+              <h4>Your application for Frontend Developer was shortlisted.</h4>
+              <p>2 hours ago</p>
+            </div>
+            <div class="notification-preview-item">
+              <h4>New Java Backend Developer job posted in Noida.</h4>
+              <p>5 hours ago</p>
+            </div>
+            <div class="notification-preview-item">
+              <h4>Complete your profile to get more recruiter visibility.</h4>
+              <p>1 day ago</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

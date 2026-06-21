@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Profile</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html" class="active">Profile</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="edit-profile.html" class="btn btn-primary">Edit Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="profile-hero">
+    <div class="container">
+      <div class="profile-hero-content">
+        <div class="profile-main-info">
+          <div class="profile-image-wrapper">
+            <img id="profileImage" src="assets/images/default-profile.png" alt="Profile Image" class="profile-image" />
+          </div>
+
+          <div class="profile-text">
+            <h1 id="profileName">User Name</h1>
+            <p class="profile-role" id="profileRole">Role</p>
+            <p class="profile-email" id="profileEmail">Email</p>
+            <p class="profile-location" id="profileLocation">Location not added</p>
+            
+            
+            <div class="profile-top-actions">
+              <a href="edit-profile.html" class="btn btn-primary">Edit Profile</a>
+              <a href="saved-jobs.html" class="btn btn-outline">Saved Jobs</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-stats-box">
+          <div class="profile-stat-item">
+            <h3 id="profileAppliedCount">0</h3>
+            <p>Applied Jobs</p>
+          </div>
+          <div class="profile-stat-item">
+            <h3 id="profileSavedCount">0</h3>
+            <p>Saved Jobs</p>
+          </div>
+          <div class="profile-stat-item">
+            <h3 id="profileCompletion">0%</h3>
+            <p>Profile Strength</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="container profile-layout">
+
+      <aside class="profile-sidebar">
+        <div class="profile-card">
+          <h3>Quick Navigation</h3>
+          <ul class="profile-side-links">
+            <li><a href="student-dashboard.html">Dashboard</a></li>
+            <li><a href="edit-profile.html">Edit Profile</a></li>
+            <li><a href="applied-jobs.html">Applied Jobs</a></li>
+            <li><a href="saved-jobs.html">Saved Jobs</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+          </ul>
+        </div>
+
+        <div class="profile-card">
+          <h3>Resume</h3>
+          <p id="resumeFileName">No resume uploaded</p>
+          <a href="#" id="resumeLink" class="btn btn-outline full-btn profile-btn-disabled">View Resume</a>
+        </div>
+
+        <div class="profile-card">
+          <h3>Profile Strength</h3>
+          <div class="profile-progress-bar">
+            <div class="profile-progress-fill" id="profileProgressFill"></div>
+          </div>
+          <p id="profileProgressText">75% completed</p>
+        </div>
+      </aside>
+
+      <main class="profile-main">
+
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <h2>About Me</h2>
+          </div>
+          <p id="profileAbout">
+            No about information added yet.
+            
+            
+          </p>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <h2>Skills</h2>
+          </div>
+          <div class="profile-skills" id="profileSkills">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>MySQL</span>
+            <span>Hibernate</span>
+            <span>REST API</span>
+            <span>DSA</span>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <h2>Education</h2>
+          </div>
+          <div class="info-block">
+            <h4 id="educationDegree">Not added</h4>
+            <p id="educationCollege">Not added</p>
+            <span id="educationYear">Not added</span>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <h2>Projects</h2>
+          </div>
+
+          <div class="project-item">
+            <h4>CareerBridge</h4>
+            <p>Job portal project with student, recruiter, and admin modules using Java, Spring Boot, MySQL, HTML, CSS, and JavaScript.</p>
+          </div>
+
+          <div class="project-item">
+            <h4>URL Shortener</h4>
+            <p>Backend-based URL shortener project using Java, Spring Boot, MySQL, and Redis with analytics and scalable redirect handling.</p>
+          </div>
+        </div>
+
+        <div class="profile-card">
+          <div class="profile-card-header">
+            <h2>Contact Information</h2>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-item">
+              <strong>Email</strong>
+              <p id="contactEmail">Not added</p>
+            </div>
+
+            <div class="contact-item">
+              <strong>Phone</strong>
+              <p id="contactPhone">Not added</p>
+            </div>
+
+            <div class="contact-item">
+              <strong>Location</strong>
+              <p id="contactLocation">Meerut, Uttar Pradesh, India</p>
+            </div>
+
+            <div class="contact-item">
+              <strong>LinkedIn</strong>
+              <p id="contactLinkedIn">Not added</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>

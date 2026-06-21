@@ -1,0 +1,281 @@
+.dashboard-hero {
+  background: linear-gradient(135deg, #0f172a, #1d4ed8, #7c3aed);
+  color: white;
+  padding: 60px 0;
+}
+
+.dashboard-hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.dashboard-welcome {
+  color: #cbd5e1;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.dashboard-hero-content h1 {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.dashboard-subtext {
+  color: #e2e8f0;
+  max-width: 650px;
+}
+
+.dashboard-section {
+  padding: 50px 0;
+  background: #f8fafc;
+}
+
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+.dashboard-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: sticky;
+  top: 100px;
+}
+
+.sidebar-card,
+.dashboard-card,
+.stat-dashboard-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.05);
+}
+
+.profile-mini-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.mini-profile-top {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profile-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.role-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 8px 14px;
+  background: #dbeafe;
+  color: #1d4ed8;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.sidebar-card h3 {
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-links a {
+  color: #334155;
+  font-weight: 500;
+}
+
+.sidebar-links a:hover {
+  color: #2563eb;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 70%;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+  border-radius: 999px;
+}
+
+#profileProgressText {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+.dashboard-main {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-dashboard-card {
+  text-align: center;
+}
+
+.stat-dashboard-card h3 {
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.stat-dashboard-card p {
+  color: #64748b;
+  font-weight: 500;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.card-header-row h2 {
+  font-size: 1.4rem;
+  color: #0f172a;
+}
+
+.card-header-row a {
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.application-list,
+.notification-preview-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.application-item,
+.notification-preview-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  background: #fafcff;
+}
+
+.application-item h3,
+.notification-preview-item h4 {
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.application-item p,
+.notification-preview-item p {
+  color: #64748b;
+}
+
+.status-badge {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.pending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.shortlisted {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.rejected {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.recommended-jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.recommended-job-card {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  background: #fafcff;
+}
+
+.recommended-job-card h3 {
+  color: #0f172a;
+  margin-bottom: 8px;
+}
+
+.recommended-company {
+  color: #334155;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.recommended-meta {
+  color: #64748b;
+  margin-bottom: 14px;
+}
+.application-item p {
+  margin-bottom: 6px;
+}
+.apply-saved-btn,
+.remove-saved-btn {
+  padding: 10px 18px;
+  border-radius: 10px;
+}
+.notification-item-custom {
+  border-left: 5px solid #2563eb;
+}
+
+.notification-status {
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+}

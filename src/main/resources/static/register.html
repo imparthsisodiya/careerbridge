@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Register</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/auth.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="companies.html">Companies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="auth-page">
+    <div class="auth-overlay"></div>
+
+    <div class="container auth-wrapper">
+      <div class="auth-left">
+        <div class="auth-left-content">
+          <h1>Create Your Account</h1>
+          <p>
+            Join CareerBridge to discover jobs, connect with recruiters,
+            manage applications, and build your professional future.
+          </p>
+
+          <div class="auth-highlights">
+            <div class="highlight-box">
+              <h3>Students</h3>
+              <p>Find and apply jobs easily</p>
+            </div>
+            <div class="highlight-box">
+              <h3>Recruiters</h3>
+              <p>Post jobs and hire talent</p>
+            </div>
+            <div class="highlight-box">
+              <h3>Secure</h3>
+              <p>Simple and safe registration</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="auth-right">
+        <div class="auth-card">
+          <div class="auth-header">
+            <h2>Register</h2>
+            <p>Create your CareerBridge account</p>
+          </div>
+
+          <form id="registerForm" class="auth-form">
+            <div class="input-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+            </div>
+
+            <div class="input-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email" required />
+            </div>
+
+            <div class="input-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Create password" required />
+            </div>
+
+            <div class="input-group">
+              <label for="confirmPassword">Confirm Password</label>
+              <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm password" required />
+            </div>
+
+            <div class="input-group">
+              <label for="role">Select Role</label>
+              <select id="role" name="role" required>
+                <option value="">Choose role</option>
+                <option value="STUDENT">Student</option>
+                <option value="RECRUITER">Recruiter</option>
+                <option value="ADMIN">Admin</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary full-btn">Create Account</button>
+
+            <p id="registerMessage" class="form-message"></p>
+          </form>
+
+          <div class="auth-footer-text">
+            <p>Already have an account? <a href="login.html">Login here</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Applicants</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/recruiter.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recruiter-dashboard.html">Recruiter Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="applicants.html" class="active">Applicants</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="my-jobs.html" class="btn btn-outline">Back to My Jobs</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero recruiter-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Manage candidates</p>
+          <h1>Applicants</h1>
+          <p class="dashboard-subtext">
+            Review applications, shortlist top talent, and manage hiring decisions.
+          </p>
+        </div>
+        <a href="post-job.html" class="btn btn-outline-light">Post New Job</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-card recruiter-card">
+        <div class="card-header-row">
+          <div>
+            <h2>All Applicants</h2>
+            <p id="applicantsCountText">Loading applicants...</p>
+          </div>
+
+          <div class="topbar-actions applicants-top-actions">
+            <select id="jobFilter">
+              <option value="">All Jobs</option>
+              <option value="Java Backend Developer">Java Backend Developer</option>
+              <option value="Frontend Developer">Frontend Developer</option>
+              <option value="UI/UX Designer">UI/UX Designer</option>
+            </select>
+
+            <select id="statusFilter">
+              <option value="">All Status</option>
+              <option value="PENDING">Pending</option>
+              <option value="SHORTLISTED">Shortlisted</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="applicantsContainer" class="applicant-preview-list">
+          <!-- Applicants will come here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/applicants.js"></script>
+</body>
+</html>

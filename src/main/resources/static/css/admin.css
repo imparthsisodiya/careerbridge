@@ -1,0 +1,116 @@
+
+.admin-hero {
+  background: linear-gradient(135deg, #0f172a, #7c2d12, #dc2626);
+}
+
+.admin-avatar {
+  background: linear-gradient(135deg, #dc2626, #7c2d12);
+}
+
+.admin-role-badge {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.admin-progress-fill {
+  width: 84%;
+  background: linear-gradient(135deg, #dc2626, #f59e0b);
+}
+
+.admin-stats-grid .admin-stat-card h3 {
+  color: #dc2626;
+}
+
+.admin-card {
+  border-top: 4px solid #dc2626;
+}
+
+.admin-side-card {
+  border-top: 4px solid #dc2626;
+}
+
+.admin-activity-list,
+.admin-report-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.admin-activity-item,
+.admin-report-item {
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 18px;
+  background: #fafcff;
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: center;
+}
+
+.admin-activity-item h3,
+.admin-report-item h3 {
+  color: #0f172a;
+  margin-bottom: 6px;
+}
+
+.admin-activity-item p,
+.admin-report-item p {
+  color: #64748b;
+}
+
+.admin-report-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.admin-table-wrapper {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  text-align: left;
+  padding: 14px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.admin-table th {
+  color: #0f172a;
+  font-size: 0.95rem;
+  background: #f8fafc;
+}
+
+.admin-table td {
+  color: #475569;
+}
+
+.admin-insights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.admin-insight-box {
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  padding: 20px;
+  background: linear-gradient(180deg, #fff7f7, #fafcff);
+}
+
+.admin-insight-box h4 {
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.admin-insight-box p {
+  color: #b91c1c;
+  font-weight: 600;
+}

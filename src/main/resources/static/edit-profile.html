@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Edit Profile</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="edit-profile.html" class="active">Edit Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="profile.html" class="btn btn-outline">Back to Profile</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="profile-hero">
+    <div class="container">
+      <div class="profile-hero-content">
+        <div class="profile-main-info">
+          <div class="profile-image-wrapper">
+            <img id="editProfilePreview" src="assets/images/default-profile.png" alt="Profile Preview" class="profile-image" />
+          </div>
+
+          <div class="profile-text">
+            <h1>Edit Your Profile</h1>
+            <p class="profile-email">Update your details, skills, resume, and profile image.</p>
+            <div class="profile-top-actions">
+              <a href="profile.html" class="btn btn-outline">View Profile</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="profile-stats-box">
+          <div class="profile-stat-item">
+            <h3>Profile</h3>
+            <p>Update details</p>
+          </div>
+          <div class="profile-stat-item">
+            <h3>Skills</h3>
+            <p>Add strengths</p>
+          </div>
+          <div class="profile-stat-item">
+            <h3>Resume</h3>
+            <p>Upload file</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-card">
+        <div class="profile-card-header">
+          <h2>Edit Profile Details</h2>
+        </div>
+
+        <form id="editProfileForm" class="edit-profile-form">
+          <div class="edit-grid">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" placeholder="Enter full name" />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter email" />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" placeholder="Enter phone number" />
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="Enter location" />
+            </div>
+
+            <div class="form-group">
+              <label for="degree">Degree</label>
+              <input type="text" id="degree" placeholder="Enter degree" />
+            </div>
+
+            <div class="form-group">
+              <label for="college">College</label>
+              <input type="text" id="college" placeholder="Enter college name" />
+            </div>
+
+            <div class="form-group">
+              <label for="educationYear">Education Year</label>
+              <input type="text" id="educationYear" placeholder="Example: 2022 - 2026" />
+            </div>
+
+            <div class="form-group">
+              <label for="linkedIn">LinkedIn</label>
+              <input type="text" id="linkedIn" placeholder="Enter LinkedIn profile link" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="about">About Me</label>
+            <textarea id="about" rows="5" placeholder="Write about yourself"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">Skills</label>
+            <input type="text" id="skills" placeholder="Example: Java, Spring Boot, MySQL, DSA" />
+            <small class="input-hint">Write skills separated by commas.</small>
+          </div>
+
+          <div class="edit-grid">
+            <div class="form-group">
+              <label for="profileImageInput">Profile Image</label>
+              <input type="file" id="profileImageInput" accept="image/*" />
+            </div>
+
+            <div class="form-group">
+              <label for="resumeInput">Resume</label>
+              <input type="file" id="resumeInput" accept=".pdf,.doc,.docx" />
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Save Profile</button>
+            <a href="profile.html" class="btn btn-outline">Cancel</a>
+          </div>
+
+          <p id="editProfileMessage" class="job-action-message"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/edit-profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Saved Jobs</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="saved-jobs.html" class="active">Saved Jobs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="jobs.html" class="btn btn-primary">Explore Jobs</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Your wishlist</p>
+          <h1>Saved Jobs</h1>
+          <p class="dashboard-subtext">
+            Keep your favorite job opportunities in one place and apply later.
+          </p>
+        </div>
+        <a href="student-dashboard.html" class="btn btn-outline-light">Back to Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-card">
+        <div class="card-header-row">
+          <div>
+            <h2>My Saved Jobs</h2>
+            <p id="savedJobsCountText">Loading saved jobs...</p>
+          </div>
+
+          <div class="topbar-actions">
+            <select id="savedJobTypeFilter">
+              <option value="">All Types</option>
+              <option value="Full Time">Full Time</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Internship">Internship</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="savedJobsContainer" class="jobs-list">
+          <!-- Saved job cards -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/saved-jobs.js"></script>
+</body>
+</html>

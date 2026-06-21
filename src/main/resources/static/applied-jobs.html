@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Applied Jobs</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="applied-jobs.html" class="active">Applied Jobs</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="jobs.html" class="btn btn-primary">Explore Jobs</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Your applications</p>
+          <h1>Applied Jobs</h1>
+          <p class="dashboard-subtext">
+            Track all the jobs you have applied for and check their latest status.
+          </p>
+        </div>
+        <a href="student-dashboard.html" class="btn btn-outline-light">Back to Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-card">
+        <div class="card-header-row">
+          <div>
+            <h2>My Applications</h2>
+            <p id="appliedJobsCountText">Loading applications...</p>
+          </div>
+
+          <div class="topbar-actions">
+            <select id="filterStatus">
+              <option value="">All Status</option>
+              <option value="PENDING">Pending</option>
+              <option value="SHORTLISTED">Shortlisted</option>
+              <option value="REJECTED">Rejected</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="appliedJobsContainer" class="application-list">
+          <!-- Jobs will come here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/applied-jobs.js"></script>
+</body>
+</html>

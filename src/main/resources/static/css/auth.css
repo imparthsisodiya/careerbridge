@@ -1,0 +1,254 @@
+.auth-page {
+  min-height: calc(100vh - 80px);
+  position: relative;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.78), rgba(30, 41, 59, 0.82)),
+    url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.auth-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(37, 99, 235, 0.16), rgba(124, 58, 237, 0.16));
+}
+
+.auth-wrapper {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.auth-left {
+  color: white;
+}
+
+.auth-left-content h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  line-height: 1.2;
+}
+
+.auth-left-content p {
+  max-width: 560px;
+  color: #e2e8f0;
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+}
+
+.auth-highlights {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.highlight-box {
+  min-width: 140px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.highlight-box h3 {
+  font-size: 1.4rem;
+  margin-bottom: 6px;
+}
+
+.highlight-box p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #dbeafe;
+}
+
+.auth-right {
+  display: flex;
+  justify-content: center;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(20px);
+  border-radius: 26px;
+  padding: 34px 28px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.22);
+  color: white;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.auth-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.auth-header p {
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-group label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  font-size: 0.98rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+  color: #cbd5e1;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+  border-color: #93c5fd;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.auth-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.forgot-link {
+  color: #bfdbfe;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+.form-message {
+  min-height: 20px;
+  text-align: center;
+  font-size: 0.92rem;
+  margin-top: 2px;
+  color: #fef3c7;
+}
+
+.auth-divider {
+  margin: 26px 0 20px;
+  text-align: center;
+  position: relative;
+}
+
+.auth-divider::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.auth-divider span {
+  position: relative;
+  background: rgba(15, 23, 42, 0.55);
+  padding: 0 14px;
+  border-radius: 20px;
+  color: #e2e8f0;
+  font-size: 0.92rem;
+}
+
+.demo-users {
+  text-align: center;
+}
+
+.demo-title {
+  color: #e2e8f0;
+  margin-bottom: 14px;
+  font-size: 0.94rem;
+}
+
+.demo-buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.small-auth-btn {
+  padding: 10px 16px;
+  font-size: 0.92rem;
+}
+
+.auth-footer-text {
+  margin-top: 22px;
+  text-align: center;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+}
+
+.auth-footer-text a {
+  color: #93c5fd;
+  font-weight: 600;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+.input-group select {
+  color: white;
+}
+
+.input-group select option {
+  color: black;
+}

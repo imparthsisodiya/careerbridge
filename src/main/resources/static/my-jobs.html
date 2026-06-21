@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | My Jobs</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/recruiter.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recruiter-dashboard.html">Recruiter Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html" class="active">My Jobs</a></li>
+          <li><a href="applicants.html">Applicants</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="post-job.html" class="btn btn-primary">Post New Job</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero recruiter-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Manage openings</p>
+          <h1>My Posted Jobs</h1>
+          <p class="dashboard-subtext">
+            View, track, and manage all jobs posted by your recruiter account.
+          </p>
+        </div>
+        <a href="recruiter-dashboard.html" class="btn btn-outline-light">Back to Dashboard</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-card recruiter-card">
+        <div class="card-header-row">
+          <div>
+            <h2>Posted Jobs</h2>
+            <p id="myJobsCountText">Loading jobs...</p>
+          </div>
+
+          <div class="topbar-actions">
+            <select id="myJobsFilter">
+              <option value="">All Types</option>
+              <option value="Full Time">Full Time</option>
+              <option value="Part Time">Part Time</option>
+              <option value="Internship">Internship</option>
+              <option value="Remote">Remote</option>
+              <option value="Hybrid">Hybrid</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="myJobsContainer" class="jobs-list">
+          <!-- Jobs will load here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/my-jobs.js"></script>
+</body>
+</html>

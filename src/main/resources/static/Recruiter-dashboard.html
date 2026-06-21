@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Recruiter Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/recruiter.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recruiter-dashboard.html" class="active">Recruiter Dashboard</a></li>
+          <li><a href="post-job.html">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="applicants.html">Applicants</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="post-job.html" class="btn btn-primary">Post New Job</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero recruiter-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Recruit smarter</p>
+          <h1 id="recruiterName">Recruiter Dashboard</h1>
+          <p class="dashboard-subtext">
+            Manage posted jobs, track applicants, shortlist talent, and grow your hiring pipeline.
+          </p>
+        </div>
+        <a href="applicants.html" class="btn btn-outline-light">View Applicants</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container dashboard-layout">
+
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-card profile-mini-card recruiter-side-card">
+          <div class="mini-profile-top">
+            <div class="profile-avatar" id="recruiterInitial">R</div>
+            <div>
+              <h3 id="sidebarRecruiterName">Recruiter</h3>
+              <p id="sidebarRecruiterEmail">recruiter@company.com</p>
+            </div>
+          </div>
+          <span class="role-badge recruiter-role-badge">RECRUITER</span>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick Links</h3>
+          <ul class="sidebar-links">
+            <li><a href="post-job.html">Post Job</a></li>
+            <li><a href="my-jobs.html">My Jobs</a></li>
+            <li><a href="applicants.html">Applicants</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="profile.html">Profile</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Hiring Progress</h3>
+          <div class="progress-bar">
+            <div class="progress-fill recruiter-progress-fill" id="recruiterProgressFill"></div>
+          </div>
+          <p id="recruiterProgressText">68% monthly target reached</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+
+        <div class="stats-grid recruiter-stats-grid">
+          <div class="stat-dashboard-card recruiter-stat-card">
+            <h3 id="totalJobsPosted">12</h3>
+            <p>Total Jobs Posted</p>
+          </div>
+          <div class="stat-dashboard-card recruiter-stat-card">
+            <h3 id="totalApplicants">148</h3>
+            <p>Total Applicants</p>
+          </div>
+          <div class="stat-dashboard-card recruiter-stat-card">
+            <h3 id="shortlistedCandidates">26</h3>
+            <p>Shortlisted</p>
+          </div>
+          <div class="stat-dashboard-card recruiter-stat-card">
+            <h3 id="interviewScheduled">9</h3>
+            <p>Interviews Scheduled</p>
+          </div>
+        </div>
+
+        <div class="dashboard-card recruiter-card">
+          <div class="card-header-row">
+            <h2>Recently Posted Jobs</h2>
+            <a href="my-jobs.html">View All</a>
+          </div>
+
+          <div class="recruiter-job-list">
+            <div class="recruiter-job-item">
+              <div>
+                <h3>Java Backend Developer</h3>
+                <p>Posted 3 days ago • Noida • Full Time</p>
+              </div>
+              <div class="recruiter-job-actions">
+                <span class="status-badge shortlisted">42 Applicants</span>
+                <a href="applicants.html" class="btn btn-small">View Applicants</a>
+              </div>
+            </div>
+
+            <div class="recruiter-job-item">
+              <div>
+                <h3>Frontend Developer</h3>
+                <p>Posted 5 days ago • Remote • Full Time</p>
+              </div>
+              <div class="recruiter-job-actions">
+                <span class="status-badge pending">31 Applicants</span>
+                <a href="applicants.html" class="btn btn-small">View Applicants</a>
+              </div>
+            </div>
+
+            <div class="recruiter-job-item">
+              <div>
+                <h3>UI/UX Designer</h3>
+                <p>Posted 1 week ago • Bangalore • Hybrid</p>
+              </div>
+              <div class="recruiter-job-actions">
+                <span class="status-badge rejected">18 Applicants</span>
+                <a href="applicants.html" class="btn btn-small">View Applicants</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card recruiter-card">
+          <div class="card-header-row">
+            <h2>Latest Applicants</h2>
+            <a href="applicants.html">Manage</a>
+          </div>
+
+          <div class="applicant-preview-list">
+            <div class="applicant-preview-item">
+              <div>
+                <h3>Yachna Rajput</h3>
+                <p>Applied for Java Backend Developer • 2 hours ago</p>
+              </div>
+              <div class="applicant-preview-actions">
+                <button class="btn btn-primary btn-mini">Shortlist</button>
+                <button class="btn btn-outline btn-mini">View</button>
+              </div>
+            </div>
+
+            <div class="applicant-preview-item">
+              <div>
+                <h3>Rahul Sharma</h3>
+                <p>Applied for Frontend Developer • 5 hours ago</p>
+              </div>
+              <div class="applicant-preview-actions">
+                <button class="btn btn-primary btn-mini">Shortlist</button>
+                <button class="btn btn-outline btn-mini">View</button>
+              </div>
+            </div>
+
+            <div class="applicant-preview-item">
+              <div>
+                <h3>Anjali Verma</h3>
+                <p>Applied for UI/UX Designer • 1 day ago</p>
+              </div>
+              <div class="applicant-preview-actions">
+                <button class="btn btn-primary btn-mini">Shortlist</button>
+                <button class="btn btn-outline btn-mini">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card recruiter-card">
+          <div class="card-header-row">
+            <h2>Recruiter Insights</h2>
+            <a href="my-jobs.html">Open Jobs</a>
+          </div>
+
+          <div class="insights-grid">
+            <div class="insight-box">
+              <h4>Top Performing Role</h4>
+              <p>Java Backend Developer</p>
+            </div>
+            <div class="insight-box">
+              <h4>Fastest Response Category</h4>
+              <p>Frontend Development</p>
+            </div>
+            <div class="insight-box">
+              <h4>Best Hiring Location</h4>
+              <p>Noida / Remote</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/recruiter.js"></script>
+</body>
+</html>

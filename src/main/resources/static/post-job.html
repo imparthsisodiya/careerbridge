@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Post Job</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/recruiter.css" />
+  <link rel="stylesheet" href="css/profile.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="recruiter-dashboard.html">Recruiter Dashboard</a></li>
+          <li><a href="post-job.html" class="active">Post Job</a></li>
+          <li><a href="my-jobs.html">My Jobs</a></li>
+          <li><a href="applicants.html">Applicants</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="recruiter-dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero recruiter-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Create opportunity</p>
+          <h1>Post a New Job</h1>
+          <p class="dashboard-subtext">
+            Publish a professional job listing and attract the right candidates for your company.
+          </p>
+        </div>
+        <a href="my-jobs.html" class="btn btn-outline-light">View My Jobs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="profile-section">
+    <div class="container">
+      <div class="profile-card recruiter-card">
+        <div class="profile-card-header">
+          <h2>Job Details</h2>
+        </div>
+
+        <form id="postJobForm" class="edit-profile-form">
+          <div class="edit-grid">
+            <div class="form-group">
+              <label for="title">Job Title</label>
+              <input type="text" id="title" placeholder="Enter job title" required />
+            </div>
+
+            <div class="form-group">
+              <label for="company">Company Name</label>
+              <input type="text" id="company" placeholder="Enter company name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="location">Location</label>
+              <input type="text" id="location" placeholder="Enter job location" required />
+            </div>
+
+            <div class="form-group">
+              <label for="type">Job Type</label>
+              <select id="type" required>
+                <option value="">Select job type</option>
+                <option value="Full Time">Full Time</option>
+                <option value="Part Time">Part Time</option>
+                <option value="Internship">Internship</option>
+                <option value="Remote">Remote</option>
+                <option value="Hybrid">Hybrid</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="experienceRequired">Experience Required</label>
+              <input type="text" id="experienceRequired" placeholder="Example: 0-2 Years" required />
+            </div>
+
+            <div class="form-group">
+              <label for="salaryRange">Salary Range</label>
+              <input type="text" id="salaryRange" placeholder="Example: ₹6 - ₹10 LPA" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="description">Job Description</label>
+            <textarea id="description" rows="6" placeholder="Write full job description" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">Required Skills</label>
+            <input type="text" id="skills" placeholder="Example: Java, Spring Boot, MySQL, REST API" required />
+            <small class="input-hint">Write skills separated by commas.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="recruiterEmail">Recruiter Email</label>
+            <input type="email" id="recruiterEmail" placeholder="Enter recruiter email" required />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Post Job</button>
+            <button type="reset" class="btn btn-outline">Reset</button>
+          </div>
+
+          <p id="postJobMessage" class="job-action-message"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/post-job.js"></script>
+</body>
+</html>

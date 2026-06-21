@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Admin Dashboard</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/admin.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="admin-dashboard.html" class="active">Admin Dashboard</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="companies.html">Companies</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <button class="btn btn-outline" onclick="logoutUser()">Logout</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero admin-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Control center</p>
+          <h1 id="adminName">Admin Dashboard</h1>
+          <p class="dashboard-subtext">
+            Monitor users, recruiters, jobs, applications, and platform activity from one place.
+          </p>
+        </div>
+        <a href="jobs.html" class="btn btn-outline-light">View Platform Jobs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container dashboard-layout">
+
+      <aside class="dashboard-sidebar">
+        <div class="sidebar-card profile-mini-card admin-side-card">
+          <div class="mini-profile-top">
+            <div class="profile-avatar admin-avatar" id="adminInitial">A</div>
+            <div>
+              <h3 id="sidebarAdminName">Admin</h3>
+              <p id="sidebarAdminEmail">admin@careerbridge.com</p>
+            </div>
+          </div>
+          <span class="role-badge admin-role-badge">ADMIN</span>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick Controls</h3>
+          <ul class="sidebar-links">
+            <li><a href="admin-dashboard.html">Dashboard Overview</a></li>
+            <li><a href="jobs.html">Manage Jobs</a></li>
+            <li><a href="companies.html">Manage Companies</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="contact.html">Support Requests</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>System Health</h3>
+          <div class="progress-bar">
+            <div class="progress-fill admin-progress-fill" id="adminProgressFill"></div>
+          </div>
+          <p id="adminProgressText">84% platform performance</p>
+        </div>
+      </aside>
+
+      <main class="dashboard-main">
+
+        <div class="stats-grid admin-stats-grid">
+          <div class="stat-dashboard-card admin-stat-card">
+            <h3 id="totalUsers">12,540</h3>
+            <p>Total Users</p>
+          </div>
+          <div class="stat-dashboard-card admin-stat-card">
+            <h3 id="totalRecruiters">684</h3>
+            <p>Total Recruiters</p>
+          </div>
+          <div class="stat-dashboard-card admin-stat-card">
+            <h3 id="totalJobs">2,186</h3>
+            <p>Total Jobs</p>
+          </div>
+          <div class="stat-dashboard-card admin-stat-card">
+            <h3 id="totalApplications">18,942</h3>
+            <p>Total Applications</p>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-card">
+          <div class="card-header-row">
+            <h2>Recent Platform Activity</h2>
+            <a href="notifications.html">Open Notifications</a>
+          </div>
+
+          <div class="admin-activity-list">
+            <div class="admin-activity-item">
+              <div>
+                <h3>New recruiter registered</h3>
+                <p>ABC Talent Hub joined the platform 1 hour ago.</p>
+              </div>
+              <span class="status-badge shortlisted">New</span>
+            </div>
+
+            <div class="admin-activity-item">
+              <div>
+                <h3>High application traffic detected</h3>
+                <p>Java Backend Developer jobs received 200+ applications today.</p>
+              </div>
+              <span class="status-badge pending">Alert</span>
+            </div>
+
+            <div class="admin-activity-item">
+              <div>
+                <h3>Job removed by admin</h3>
+                <p>A duplicate job listing was removed from the platform.</p>
+              </div>
+              <span class="status-badge rejected">Resolved</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-card">
+          <div class="card-header-row">
+            <h2>Recent Recruiters</h2>
+            <a href="companies.html">View Companies</a>
+          </div>
+
+          <div class="admin-table-wrapper">
+            <table class="admin-table">
+              <thead>
+                <tr>
+                  <th>Company</th>
+                  <th>Recruiter Email</th>
+                  <th>Status</th>
+                  <th>Jobs Posted</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TechNova Pvt Ltd</td>
+                  <td>hr@technova.com</td>
+                  <td><span class="status-badge shortlisted">Active</span></td>
+                  <td>12</td>
+                </tr>
+                <tr>
+                  <td>CodeSpark Technologies</td>
+                  <td>jobs@codespark.com</td>
+                  <td><span class="status-badge shortlisted">Active</span></td>
+                  <td>8</td>
+                </tr>
+                <tr>
+                  <td>BrightPath Solutions</td>
+                  <td>careers@brightpath.com</td>
+                  <td><span class="status-badge pending">Review</span></td>
+                  <td>5</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-card">
+          <div class="card-header-row">
+            <h2>Latest Job Reports</h2>
+            <a href="jobs.html">Manage Jobs</a>
+          </div>
+
+          <div class="admin-report-list">
+            <div class="admin-report-item">
+              <div>
+                <h3>Duplicate Job Report</h3>
+                <p>Reported against Frontend Developer listing by 3 users.</p>
+              </div>
+              <div class="admin-report-actions">
+                <button class="btn btn-primary btn-mini">Review</button>
+                <button class="btn btn-outline btn-mini">Dismiss</button>
+              </div>
+            </div>
+
+            <div class="admin-report-item">
+              <div>
+                <h3>Suspicious Recruiter Activity</h3>
+                <p>Multiple repeated postings from one recruiter account.</p>
+              </div>
+              <div class="admin-report-actions">
+                <button class="btn btn-primary btn-mini">Review</button>
+                <button class="btn btn-outline btn-mini">Dismiss</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dashboard-card admin-card">
+          <div class="card-header-row">
+            <h2>Platform Insights</h2>
+            <a href="about.html">About Platform</a>
+          </div>
+
+          <div class="admin-insights-grid">
+            <div class="admin-insight-box">
+              <h4>Top Category</h4>
+              <p>Software Development</p>
+            </div>
+            <div class="admin-insight-box">
+              <h4>Most Active Location</h4>
+              <p>Noida / Bangalore</p>
+            </div>
+            <div class="admin-insight-box">
+              <h4>Fastest Growing Role</h4>
+              <p>Backend Developer</p>
+            </div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

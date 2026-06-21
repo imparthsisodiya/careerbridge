@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Job Details</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/jobs.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html" class="active">Jobs</a></li>
+          <li><a href="companies.html">Companies</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="login.html" class="btn btn-outline">Login</a>
+        <a href="register.html" class="btn btn-primary">Register</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="jobs-hero">
+    <div class="container">
+      <div class="jobs-hero-content">
+        <h1>Job Details</h1>
+        <p>Read the full description and apply with confidence.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="jobs-section">
+    <div class="container job-details-layout">
+
+      <main class="job-details-main">
+        <div class="job-details-card">
+          <div class="job-details-header">
+            <div>
+              <h2 id="jobTitle">Java Backend Developer</h2>
+              <p class="company-name" id="jobCompany">TechNova Pvt Ltd</p>
+            </div>
+            <span class="job-badge" id="jobType">Full Time</span>
+          </div>
+
+          <div class="job-meta details-meta">
+            <span id="jobLocation">Noida, India</span>
+            <span id="jobExperience">0-2 Years</span>
+            <span id="jobSalary">₹6 - ₹10 LPA</span>
+            <span id="jobPosted">Posted 2 days ago</span>
+          </div>
+
+          <div class="details-section">
+            <h3>Job Description</h3>
+            <p id="jobDescription">
+              We are looking for a Java Backend Developer who has strong knowledge of Java,
+              Spring Boot, REST APIs, MySQL, and backend problem solving. The candidate should
+              be able to build scalable APIs and work with databases efficiently.
+            </p>
+          </div>
+
+          <div class="details-section">
+            <h3>Key Responsibilities</h3>
+            <ul class="details-list" id="jobResponsibilities">
+              <li>Develop and maintain backend services using Java and Spring Boot.</li>
+              <li>Design clean and efficient REST APIs.</li>
+              <li>Integrate MySQL database with backend applications.</li>
+              <li>Write reusable, testable, and scalable code.</li>
+              <li>Collaborate with frontend developers and team members.</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3>Required Skills</h3>
+            <div class="job-skills" id="jobSkills">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+              <span>REST API</span>
+              <span>Hibernate</span>
+            </div>
+          </div>
+
+          <div class="details-section">
+            <h3>Qualifications</h3>
+            <ul class="details-list" id="jobQualifications">
+              <li>B.Tech / B.E. / MCA or related degree.</li>
+              <li>Strong understanding of Java fundamentals.</li>
+              <li>Knowledge of Spring Boot and SQL databases.</li>
+              <li>Good communication and problem-solving skills.</li>
+            </ul>
+          </div>
+
+          <div class="details-section">
+            <h3>Benefits</h3>
+            <ul class="details-list" id="jobBenefits">
+              <li>Competitive salary package.</li>
+              <li>Learning and growth opportunities.</li>
+              <li>Flexible working culture.</li>
+              <li>Exposure to real-world backend systems.</li>
+            </ul>
+          </div>
+
+          <div class="job-actions">
+            <button id="applyNowBtn" class="btn btn-primary">Apply Now</button>
+            <button id="saveJobBtn" class="btn btn-outline">Save Job</button>
+            <a href="jobs.html" class="btn btn-outline">Back to Jobs</a>
+          </div>
+
+          <p id="jobActionMessage" class="job-action-message"></p>
+        </div>
+      </main>
+
+      <aside class="job-details-sidebar">
+        <div class="detail-side-card">
+          <h3>Job Overview</h3>
+          <div class="overview-item">
+            <strong>Role</strong>
+            <p id="overviewRole">Backend Developer</p>
+          </div>
+          <div class="overview-item">
+            <strong>Industry</strong>
+            <p id="overviewIndustry">Software Development</p>
+          </div>
+          <div class="overview-item">
+            <strong>Employment Type</strong>
+            <p id="overviewEmployment">Full Time</p>
+          </div>
+          <div class="overview-item">
+            <strong>Experience</strong>
+            <p id="overviewExperience">0-2 Years</p>
+          </div>
+          <div class="overview-item">
+            <strong>Location</strong>
+            <p id="overviewLocation">Noida, India</p>
+          </div>
+        </div>
+
+        <div class="detail-side-card">
+          <h3>Why Apply?</h3>
+          <ul class="details-list">
+            <li>Work on real backend projects.</li>
+            <li>Build experience in Java and Spring Boot.</li>
+            <li>Grow with a strong technical team.</li>
+            <li>Improve your career opportunities.</li>
+          </ul>
+        </div>
+      </aside>
+
+    </div>
+  </section>
+
+  <script src="js/navbar.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/job-details.js"></script>
+</body>
+</html>

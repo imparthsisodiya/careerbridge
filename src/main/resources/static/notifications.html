@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CareerBridge | Notifications</title>
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="container nav-container">
+      <div class="logo">Career<span>Bridge</span></div>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="jobs.html">Jobs</a></li>
+          <li><a href="student-dashboard.html">Dashboard</a></li>
+          <li><a href="profile.html">Profile</a></li>
+          <li><a href="notifications.html" class="active">Notifications</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-buttons">
+        <a href="student-dashboard.html" class="btn btn-outline">Back to Dashboard</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="dashboard-hero">
+    <div class="container">
+      <div class="dashboard-hero-content">
+        <div>
+          <p class="dashboard-welcome">Stay updated</p>
+          <h1>Notifications</h1>
+          <p class="dashboard-subtext">
+            Check application updates, recruiter responses, and job alerts in one place.
+          </p>
+        </div>
+        <button id="markAllReadBtn" class="btn btn-primary">Mark All Read</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="dashboard-section">
+    <div class="container">
+      <div class="dashboard-card">
+        <div class="card-header-row">
+          <div>
+            <h2>Recent Notifications</h2>
+            <p id="notificationCountText">Loading notifications...</p>
+          </div>
+
+          <div class="topbar-actions">
+            <select id="notificationFilter">
+              <option value="">All</option>
+              <option value="UNREAD">Unread</option>
+              <option value="READ">Read</option>
+            </select>
+          </div>
+        </div>
+
+        <div id="notificationsContainer" class="notification-preview-list">
+          <!-- Notifications here -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/utils.js"></script>
+  <script src="js/notifications.js"></script>
+</body>
+</html>

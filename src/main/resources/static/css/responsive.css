@@ -1,0 +1,232 @@
+@media (max-width: 992px) {
+  .auth-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-left {
+    text-align: center;
+  }
+
+  .auth-left-content p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .auth-highlights {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .auth-card {
+    padding: 26px 18px;
+  }
+
+  .auth-left-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .auth-options {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .demo-buttons {
+    flex-direction: column;
+  }
+}
+@media (max-width: 992px) {
+  .jobs-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-sidebar {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .jobs-hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .jobs-topbar,
+  .job-item-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .job-actions .btn,
+  .job-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .job-details-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .job-details-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-details-header h2 {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 992px) {
+  .dashboard-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-sidebar {
+    position: static;
+  }
+
+  .stats-grid,
+  .recommended-jobs-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-hero-content,
+  .card-header-row,
+  .application-item,
+  .notification-preview-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .stats-grid,
+  .recommended-jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-hero-content h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 992px) {
+  .profile-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-sidebar {
+    position: static;
+  }
+
+  .profile-hero-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-stats-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .profile-main-info {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-text h1 {
+    font-size: 2rem;
+  }
+
+  .profile-stats-box,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-top-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .profile-top-actions a {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .edit-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions .btn,
+  .form-actions a {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 992px) {
+  .insights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .recruiter-job-item,
+  .applicant-preview-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .recruiter-job-actions,
+  .applicant-preview-actions {
+    width: 100%;
+  }
+
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .applicants-top-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .applicants-top-actions select {
+    width: 100%;
+  }
+
+  .applicant-actions-vertical {
+    width: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .admin-insights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .admin-activity-item,
+  .admin-report-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .admin-report-actions {
+    width: 100%;
+  }
+
+  .admin-insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
